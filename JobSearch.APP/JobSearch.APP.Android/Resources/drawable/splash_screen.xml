@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <color android:color="@color/ic_launcher_background"/>
+    <!--COR DE FUNDO-->
+  </item>
+  <item>
+    <!--IMAGEM-->
+    <bitmap
+        android:src="@drawable/Logo"
+        android:tileMode="disabled"
+        android:gravity="center"/>
+  </item>
+
+<!--//Um texto e uma imagem <item>
+    
+    <bitmap
+        android:src="@drawable/logo"
+        android:tileMode="disabled"
+        android:gravity="center"/>
+  </item>
+
+  <item android:top="60dp">
+
+  <bitmap
+      android:src="@drawable/logoTexto"
+      android:tileMode="disabled"
+      android:gravity="center"/>
+  </item>-->
+</layer-list>

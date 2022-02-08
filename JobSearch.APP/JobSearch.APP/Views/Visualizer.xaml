@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Control="clr-namespace:JobSearch.APP.Utility.Controls"
+             x:Class="JobSearch.APP.Views.Visualizer">
+    <ContentPage.Content>
+        <!--Text="&#60;-->
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton  Clicked="GoBack" Style="{StaticResource BackButton}"></ImageButton>
+                <Label Text="JobSearch" Style="{StaticResource Title}" Grid.Column="1" />
+            </Grid>
+
+            <BoxView Color="#D7CCFF" HeightRequest="1"></BoxView>
+            <ScrollView>
+                <StackLayout>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Text="{Binding Company}"  Style="{StaticResource TextSecondary}"></Label>
+                        <Label Text="{Binding JobTitle}" Grid.Row="1" Style="{StaticResource TextPrimary}"></Label>
+                        <Label Text="{Binding CityState}" Grid.Row="2" Style="{StaticResource TextSecondary}"></Label>
+                    <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                    <Span Text="{Binding InitialSalary}" Style="{StaticResource MoneyLabel}"></Span>
+                                    <Span Text="-" Style="{StaticResource MoneyLabel}"></Span>
+                                    <Span Text="{Binding FinalSalary}" Style="{StaticResource MoneyLabel}"></Span>
+                                    <Span Text=" BRL" Style="{StaticResource CurrencyLabel}"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                        <Label Text="{Binding ContractType}" Style="{StaticResource TextPrimary}" Grid.Row="4"/>
+                       
+
+                        <Label  Grid.Row="0" Grid.Column="1" Style="{StaticResource TextPrimary}" HorizontalOptions="End">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Pub."></Span>
+                                <Span Text="{Binding PublicationDate, StringFormat='{0:dd/MM/yyyy}'}"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label  Grid.Row="1" Grid.Column="1" Style="{StaticResource IdLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="id."></Span>
+                                <Span Text="{Binding Id}"></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+                    <Control:TagView Techonologies="{Binding TecnologyTools}"></Control:TagView>
+                    <Label Style="{StaticResource TextPrimary}"  Text="Interessados enviar e-mail para:"></Label>
+                    <Label Style="{StaticResource TextSecondary}" Text="{Binding InterestedSendEmailTo}"></Label>
+
+                <BoxView Color="#F3F5F7" HeightRequest="1"></BoxView>
+
+                    <Label x:Name="HeaderCompanyDescription" Style="{StaticResource TitlePrimary}" Text="Descrição da empresa"></Label>
+
+                    <Label x:Name="TextCompanyDescription" Style="{StaticResource TextPrimary}"  Text="{Binding CompanyDescription}"></Label>
+
+                    <Label x:Name="HeaderJobDescription" Style="{StaticResource TitlePrimary}" Text="Descrição do trabalho"></Label>
+
+                    <Label x:Name="TextJobDescription"  Style="{StaticResource TextPrimary}"  Text="{Binding JobDescription}"></Label>
+
+                    <Label x:Name="HeaderBenefits" Style="{StaticResource TitlePrimary}" Text="Beneficios"></Label>
+
+                    <Label x:Name="TextBenefits" Style="{StaticResource TextPrimary}"  Text="{Binding Benefits}"></Label>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

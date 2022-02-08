@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JobSearch.APP.Utility.Controls.TagView">
+    <ContentView.Content>
+        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Start"
+                    AlignItems="Start"  x:Name="Container">
+            
+        </FlexLayout>
+    </ContentView.Content>
+</ContentView>
